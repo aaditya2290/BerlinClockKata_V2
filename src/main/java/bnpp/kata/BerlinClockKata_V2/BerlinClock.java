@@ -9,4 +9,8 @@ public class BerlinClock {
 			return "O";
 	}
 
+	public String convertHoursToFiveHoursRow(int hours){
+		return "OOOO";
+	}
+
 }
