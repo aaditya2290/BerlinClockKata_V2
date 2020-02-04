@@ -15,9 +15,12 @@ public class BerlinClock {
 			return "ROOO";
 		else
 			if (hours>=10 && hours<=14)
-				return "RROO";	
+				return "RROO";
 			else
-				return "OOOO";
+				if (hours>=15 && hours<=19)
+					return "RRRO";	
+				else
+					return "OOOO";
 	}
 
 }
