@@ -3,7 +3,10 @@ package bnpp.kata.BerlinClockKata_V2;
 public class BerlinClock {
 
 	public String convertSecondsToSecondsLamp(int seconds){
-		return "Y";
+		if (seconds%2==0)
+			return "Y";
+		else
+			return "O";
 	}
 
 }

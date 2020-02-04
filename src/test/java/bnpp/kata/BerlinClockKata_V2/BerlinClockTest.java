@@ -20,4 +20,9 @@ public class BerlinClockTest {
 		assertEquals("Y",clock.convertSecondsToSecondsLamp(0));
 	}
 
+	@Test
+	public void testSecondsLampTurnsOffForOddSeconds(){
+		assertEquals("O",clock.convertSecondsToSecondsLamp(17));
+	}
+
 }
