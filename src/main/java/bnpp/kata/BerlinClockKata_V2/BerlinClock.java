@@ -20,7 +20,10 @@ public class BerlinClock {
 				if (hours>=15 && hours<=19)
 					return "RRRO";	
 				else
-					return "OOOO";
+					if (hours>=20 && hours<=23)
+						return "RRRR";
+					else
+						return "OOOO";
 	}
 
 }

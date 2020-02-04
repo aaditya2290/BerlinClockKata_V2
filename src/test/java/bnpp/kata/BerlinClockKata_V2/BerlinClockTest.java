@@ -45,4 +45,9 @@ public class BerlinClockTest {
 		assertEquals("RRRO",clock.convertHoursToFiveHoursRow(15));
 	}
 
+	@Test
+	public void testFiveHoursRowAllLampsTurnsOnForHours20to23(){
+		assertEquals("RRRR",clock.convertHoursToFiveHoursRow(22));
+	}
+
 }
