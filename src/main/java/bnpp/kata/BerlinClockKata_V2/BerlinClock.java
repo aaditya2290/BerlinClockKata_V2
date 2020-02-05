@@ -40,6 +40,12 @@ public class BerlinClock {
 		return result;
 	}
 
+	public String convertMinutesToSingleMinutesRow(int minutes){
+
+		return "OOOO";
+
+	}
+
 	public String convertHourstoBerlinClockHourRows(int hours,int onLampsCount){
 
 		String result="";
@@ -51,12 +57,12 @@ public class BerlinClock {
 		return result;
 
 	}
-	
-    public boolean isOnLampRed(int index){
-    	
-    	return (index+1)%3==0;
-    	
-	
-    }
+
+	public boolean isOnLampRed(int index){
+
+		return (index+1)%3==0;
+
+
+	}
 
 }
