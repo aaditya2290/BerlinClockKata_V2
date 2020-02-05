@@ -89,29 +89,34 @@ public class BerlinClockTest {
 	public void testFiveMinuteRowSecondYellowLampTurnsOnForMinutes10to14(){
 		assertEquals("YYOOOOOOOOO",clock.convertMinutesToFiveMinutesRow(13));
 	}
-	
+
 	@Test
 	public void testFiveMinuteRowThirdRedLampTurnsOnForMinutes15to19(){
 		assertEquals("YYROOOOOOOO",clock.convertMinutesToFiveMinutesRow(16));
 	}
-	
+
 	@Test
 	public void testFiveMinuteRowFourthYellowLampTurnsOnForMinutes20to24(){
 		assertEquals("YYRYOOOOOOO",clock.convertMinutesToFiveMinutesRow(22));
 	}
-	
+
 	@Test
 	public void testFiveMinuteRowFifthYellowLampTurnsOnForMinutes25to29(){
 		assertEquals("YYRYYOOOOOO",clock.convertMinutesToFiveMinutesRow(25));
 	}
-	
+
 	@Test
 	public void testFiveMinuteRowSixthRedLampTurnsOnForMinutes30to34(){
 		assertEquals("YYRYYROOOOO",clock.convertMinutesToFiveMinutesRow(33));
 	}
-	
+
 	@Test
 	public void testFiveMinuteRowSeventhYellowLampTurnsOnForMinutes35to39(){
 		assertEquals("YYRYYRYOOOO",clock.convertMinutesToFiveMinutesRow(36));
+	}
+
+	@Test
+	public void testFiveMinuteRowEighthYellowLampTurnsOnForMinutes40to44(){
+		assertEquals("YYRYYRYYOOO",clock.convertMinutesToFiveMinutesRow(42));
 	}
 }
