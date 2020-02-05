@@ -199,4 +199,9 @@ public class BerlinClockTest {
 	public void testDigitalTimeToBerlinClockTimeConversionFiveHoursRowConversion(){
 		assertEquals("RRRO",clock.convertDigitalTimeToBerlinClockTime("15:48:12")[1]);
 	}
+	
+	@Test
+	public void testDigitalTimeToBerlinClockTimeConversionSingleHoursRowConversion(){
+		assertEquals("ROOO",clock.convertDigitalTimeToBerlinClockTime("16:48:12")[2]);
+	}
 }

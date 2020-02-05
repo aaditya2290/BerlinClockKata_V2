@@ -7,7 +7,7 @@ public class BerlinClock {
 		int seconds=Integer.parseInt(digitalTime.split(":")[2]);
 		int hours=Integer.parseInt(digitalTime.split(":")[0]);
 
-		return new String[]{convertSecondsToSecondsLamp(seconds),convertHoursToFiveHoursRow(hours),"OOOO","OOOOOOOOOOO","OOOO"};
+		return new String[]{convertSecondsToSecondsLamp(seconds),convertHoursToFiveHoursRow(hours),convertHoursToSingleHoursRow(hours),"OOOOOOOOOOO","OOOO"};
 	}
 
 	public String convertSecondsToSecondsLamp(int seconds){
