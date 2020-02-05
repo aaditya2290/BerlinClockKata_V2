@@ -6,8 +6,9 @@ public class BerlinClock {
 
 		int seconds=Integer.parseInt(digitalTime.split(":")[2]);
 		int hours=Integer.parseInt(digitalTime.split(":")[0]);
+		int minutes=Integer.parseInt(digitalTime.split(":")[1]);
 
-		return new String[]{convertSecondsToSecondsLamp(seconds),convertHoursToFiveHoursRow(hours),convertHoursToSingleHoursRow(hours),"OOOOOOOOOOO","OOOO"};
+		return new String[]{convertSecondsToSecondsLamp(seconds),convertHoursToFiveHoursRow(hours),convertHoursToSingleHoursRow(hours),convertMinutesToFiveMinutesRow(minutes),"OOOO"};
 	}
 
 	public String convertSecondsToSecondsLamp(int seconds){
