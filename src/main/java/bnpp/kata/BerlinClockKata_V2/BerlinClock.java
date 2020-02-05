@@ -42,16 +42,14 @@ public class BerlinClock {
 
 	public String convertMinutesToSingleMinutesRow(int minutes){
 
-		if (minutes%5==1)
-			return "YOOO";
-		else
-			if (minutes%5==2)
-				return "YYOO";
+		int onLampsCount=minutes%5;
+		String result="";
+		for (int i=0;i<4;i++)
+			if (i<onLampsCount)
+				result+="Y";
 			else
-				if (minutes%5==3)
-					return "YYYO";
-				else
-					return "OOOO";
+				result+="O";
+		return result;
 
 	}
 
