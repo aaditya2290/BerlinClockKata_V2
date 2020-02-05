@@ -3,10 +3,11 @@ package bnpp.kata.BerlinClockKata_V2;
 public class BerlinClock {
 
 	public String[] convertDigitalTimeToBerlinClockTime(String digitalTime){
-		
-		int seconds=Integer.parseInt(digitalTime.split(":")[2]);
 
-		return new String[]{convertSecondsToSecondsLamp(seconds),"OOOO","OOOO","OOOOOOOOOOO","OOOO"};
+		int seconds=Integer.parseInt(digitalTime.split(":")[2]);
+		int hours=Integer.parseInt(digitalTime.split(":")[0]);
+
+		return new String[]{convertSecondsToSecondsLamp(seconds),convertHoursToFiveHoursRow(hours),"OOOO","OOOOOOOOOOO","OOOO"};
 	}
 
 	public String convertSecondsToSecondsLamp(int seconds){
