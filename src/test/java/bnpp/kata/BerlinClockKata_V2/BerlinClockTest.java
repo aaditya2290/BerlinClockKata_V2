@@ -64,5 +64,10 @@ public class BerlinClockTest {
 	public void testSingleHoursRowFirstTwoLampsTurnsOnForHoursEndingWith2or7(){
 		assertEquals("RROO",clock.convertHoursToSingleHoursRow(7));
 	}
+	
+	@Test
+	public void testSingleHoursRowFirstThreeLampsTurnsOnForHoursEndingWith3or8(){
+		assertEquals("RRRO",clock.convertHoursToSingleHoursRow(13));
+	}
 
 }

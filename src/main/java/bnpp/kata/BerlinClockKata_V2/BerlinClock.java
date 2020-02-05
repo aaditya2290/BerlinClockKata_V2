@@ -30,7 +30,10 @@ public class BerlinClock {
 			if (hours%5==2)
 				return "RROO";
 			else
-				return "OOOO";
+				if (hours%5==3)
+					return "RRRO";
+				else
+					return "OOOO";
 	}
 
 }
