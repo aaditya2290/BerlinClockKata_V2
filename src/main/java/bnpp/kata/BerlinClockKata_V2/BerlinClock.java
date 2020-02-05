@@ -30,7 +30,7 @@ public class BerlinClock {
 		for (int i=0;i<11;i++)
 			if (i<onLampsCount)
 			{
-				if ((i+1)%3==0)
+				if (isOnLampRed(i))
 					result+="R";
 				else
 					result+="Y";	
@@ -51,6 +51,12 @@ public class BerlinClock {
 		return result;
 
 	}
-
+	
+    public boolean isOnLampRed(int index){
+    	
+    	return (index+1)%3==0;
+    	
+	
+    }
 
 }
