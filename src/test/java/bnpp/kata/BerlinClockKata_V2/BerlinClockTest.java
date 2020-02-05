@@ -94,5 +94,10 @@ public class BerlinClockTest {
 	public void testFiveMinuteRowThirdRedLampTurnsOnForMinutes15to19(){
 		assertEquals("YYROOOOOOOO",clock.convertMinutesToFiveMinutesRow(16));
 	}
+	
+	@Test
+	public void testFiveMinuteRowFourthYellowLampTurnsOnForMinutes20to24(){
+		assertEquals("YYRYOOOOOOO",clock.convertMinutesToFiveMinutesRow(22));
+	}
 
 }
