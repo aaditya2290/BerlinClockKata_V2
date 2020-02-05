@@ -22,10 +22,13 @@ public class BerlinClock {
 		return convertHourstoBerlinClockHourRows(hours,onLampsCount);
 
 	}
-	
+
 	public String convertMinutesToFiveMinutesRow(int minutes){
-		
-		return "OOOOOOOOOOO";
+
+		if (minutes>=5 && minutes<=9)
+			return "YOOOOOOOOOO";
+		else
+			return "OOOOOOOOOOO";
 	}
 
 	public String convertHourstoBerlinClockHourRows(int hours,int onLampsCount){
@@ -39,6 +42,6 @@ public class BerlinClock {
 		return result;
 
 	}
-	
+
 
 }
