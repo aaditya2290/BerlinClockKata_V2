@@ -12,19 +12,19 @@ public class BerlinClock {
 	public String convertHoursToFiveHoursRow(int hours){
 
 		int onLampsCount=hours/5;
-		String result="";
-		for (int i=0;i<4;i++)
-			if (i<onLampsCount)
-				result+="R";
-			else
-				result+="O";
-		return result;
+		return convertHourstoBerlinClockHourRows(hours,onLampsCount);
 
 	}
 
 	public String convertHoursToSingleHoursRow(int hours){
 
 		int onLampsCount=hours%5;
+		return convertHourstoBerlinClockHourRows(hours,onLampsCount);
+
+	}
+
+	public String convertHourstoBerlinClockHourRows(int hours,int onLampsCount){
+
 		String result="";
 		for (int i=0;i<4;i++)
 			if (i<onLampsCount)
@@ -32,6 +32,7 @@ public class BerlinClock {
 			else
 				result+="O";
 		return result;
+
 	}
 
 }
