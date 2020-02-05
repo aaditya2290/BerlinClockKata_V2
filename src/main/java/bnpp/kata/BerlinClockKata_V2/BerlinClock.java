@@ -21,5 +21,9 @@ public class BerlinClock {
 		return result;
 
 	}
+	
+	public String convertHoursToSingleHoursRow(int hours){
+		return "OOOO";
+	}
 
 }
