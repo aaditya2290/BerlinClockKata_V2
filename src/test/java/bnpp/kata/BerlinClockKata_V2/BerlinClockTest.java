@@ -74,15 +74,20 @@ public class BerlinClockTest {
 	public void testSingleHoursRowAllLampsTurnsOnForHoursEndingWith4or9(){
 		assertEquals("RRRR",clock.convertHoursToSingleHoursRow(4));
 	}
-	
+
 	@Test
 	public void testFiveMinutesRowContains11Lamps(){
 		assertEquals(11,clock.convertMinutesToFiveMinutesRow(0).length());
 	}
-	
+
 	@Test
 	public void testFiveMinuteRowFirstYellowLampTurnsOnForMinutes5to9(){
 		assertEquals("YOOOOOOOOOO",clock.convertMinutesToFiveMinutesRow(8));
+	}
+
+	@Test
+	public void testFiveMinuteRowSecondYellowLampTurnsOnForMinutes10to14(){
+		assertEquals("YYOOOOOOOOO",clock.convertMinutesToFiveMinutesRow(13));
 	}
 
 }
