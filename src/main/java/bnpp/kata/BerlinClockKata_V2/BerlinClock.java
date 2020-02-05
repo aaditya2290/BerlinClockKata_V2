@@ -25,40 +25,19 @@ public class BerlinClock {
 
 	public String convertMinutesToFiveMinutesRow(int minutes){
 
-		if (minutes/5==1)
-			return "YOOOOOOOOOO";
-		else
-			if (minutes/5==2)
-				return "YYOOOOOOOOO";
-			else
-				if (minutes/5==3)
-					return "YYROOOOOOOO";
+		int onLampsCount=minutes/5;
+		String result="";
+		for (int i=0;i<11;i++)
+			if (i<onLampsCount)
+			{
+				if ((i+1)%3==0)
+					result+="R";
 				else
-					if (minutes/5==4)
-						return "YYRYOOOOOOO";
-					else
-						if (minutes/5==5)
-							return "YYRYYOOOOOO";
-						else
-							if (minutes/5==6)
-								return "YYRYYROOOOO";
-							else
-								if (minutes/5==7)
-									return "YYRYYRYOOOO";
-								else
-									if (minutes/5==8)
-										return "YYRYYRYYOOO";
-									else
-										if (minutes/5==9)
-											return "YYRYYRYYROO";
-										else
-											if (minutes/5==10)
-												return "YYRYYRYYRYO";
-											else
-												if (minutes/5==11)
-													return "YYRYYRYYRYY";
-												else
-													return "OOOOOOOOOOO";
+					result+="Y";	
+			}
+			else
+				result+="O";
+		return result;
 	}
 
 	public String convertHourstoBerlinClockHourRows(int hours,int onLampsCount){
