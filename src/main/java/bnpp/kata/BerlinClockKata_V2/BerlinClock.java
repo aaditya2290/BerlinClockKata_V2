@@ -24,19 +24,14 @@ public class BerlinClock {
 
 	public String convertHoursToSingleHoursRow(int hours){
 
-		if (hours%5==1)
-			return "ROOO";
-		else
-			if (hours%5==2)
-				return "RROO";
+		int onLampsCount=hours%5;
+		String result="";
+		for (int i=0;i<4;i++)
+			if (i<onLampsCount)
+				result+="R";
 			else
-				if (hours%5==3)
-					return "RRRO";
-				else
-					if (hours%5==4)
-						return "RRRR";
-					else
-						return "OOOO";
+				result+="O";
+		return result;
 	}
 
 }
