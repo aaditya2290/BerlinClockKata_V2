@@ -144,4 +144,9 @@ public class BerlinClockTest {
 	public void testSingleMinutesRowFirstYellowLampTurnsOnForMinutesEndingWith1or6(){
 		assertEquals("YOOO",clock.convertMinutesToSingleMinutesRow(6));
 	}
+	
+	@Test
+	public void testSingleMinutesRowSecondYellowLampTurnsOnForMinutesEndingWith2or7(){
+		assertEquals("YYOO",clock.convertMinutesToSingleMinutesRow(2));
+	}
 }
