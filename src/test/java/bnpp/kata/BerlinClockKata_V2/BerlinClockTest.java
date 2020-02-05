@@ -59,15 +59,20 @@ public class BerlinClockTest {
 	public void testSingleHoursRowFirstLampTurnsOnForHoursEndingWith1or6(){
 		assertEquals("ROOO",clock.convertHoursToSingleHoursRow(21));
 	}
-	
+
 	@Test
 	public void testSingleHoursRowFirstTwoLampsTurnsOnForHoursEndingWith2or7(){
 		assertEquals("RROO",clock.convertHoursToSingleHoursRow(7));
 	}
-	
+
 	@Test
 	public void testSingleHoursRowFirstThreeLampsTurnsOnForHoursEndingWith3or8(){
 		assertEquals("RRRO",clock.convertHoursToSingleHoursRow(13));
+	}
+
+	@Test
+	public void testSingleHoursRowAllLampsTurnsOnForHoursEndingWith4or9(){
+		assertEquals("RRRR",clock.convertHoursToSingleHoursRow(4));
 	}
 
 }
