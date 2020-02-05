@@ -21,31 +21,31 @@ public class BerlinClock {
 	public String convertHoursToFiveHoursRow(int hours){
 
 		int onLampsCount=hours/5;
-		return convertHourstoBerlinClockHourRows(4,onLampsCount,"R");
+		return convertHoursMinutestoBerlinClockHourMinuteRows(4,onLampsCount,"R");
 
 	}
 
 	public String convertHoursToSingleHoursRow(int hours){
 
 		int onLampsCount=hours%5;
-		return convertHourstoBerlinClockHourRows(4,onLampsCount,"R");
+		return convertHoursMinutestoBerlinClockHourMinuteRows(4,onLampsCount,"R");
 
 	}
 
 	public String convertMinutesToFiveMinutesRow(int minutes){
 
 		int onLampsCount=minutes/5;
-		return convertHourstoBerlinClockHourRows(11,onLampsCount,"Y");
+		return convertHoursMinutestoBerlinClockHourMinuteRows(11,onLampsCount,"Y");
 	}
 
 	public String convertMinutesToSingleMinutesRow(int minutes){
 
 		int onLampsCount=minutes%5;
-		return convertHourstoBerlinClockHourRows(4,onLampsCount,"Y");
+		return convertHoursMinutestoBerlinClockHourMinuteRows(4,onLampsCount,"Y");
 
 	}
 
-	public String convertHourstoBerlinClockHourRows(int lampsCount,int onLampsCount,String onLampDisplay){
+	public String convertHoursMinutestoBerlinClockHourMinuteRows(int lampsCount,int onLampsCount,String onLampDisplay){
 
 		String result="";
 		for (int i=0;i<lampsCount;i++)
