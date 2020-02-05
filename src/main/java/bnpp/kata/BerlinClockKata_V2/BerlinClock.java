@@ -42,7 +42,10 @@ public class BerlinClock {
 
 	public String convertMinutesToSingleMinutesRow(int minutes){
 
-		return "OOOO";
+		if (minutes%10==1 || minutes%10==6)
+			return "YOOO";
+		else
+			return "OOOO";
 
 	}
 
