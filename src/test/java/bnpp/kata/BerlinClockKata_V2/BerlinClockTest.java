@@ -159,4 +159,9 @@ public class BerlinClockTest {
 	public void testSingleMinutesRowFourthYellowLampTurnsOnForMinutesEndingWith4or9(){
 		assertEquals("YYYY",clock.convertMinutesToSingleMinutesRow(4));
 	}
+	
+	@Test
+	public void testDigitalTimeToBerlinClockTimeConversionArraySizeShouldBe5(){
+		assertEquals(5,clock.convertDigitalTimeToBerlinClockTime("00:00:00").length);
+	}
 }

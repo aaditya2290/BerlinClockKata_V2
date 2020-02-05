@@ -2,6 +2,11 @@ package bnpp.kata.BerlinClockKata_V2;
 
 public class BerlinClock {
 
+	public String[] convertDigitalTimeToBerlinClockTime(String digitalTime){
+
+		return new String[]{"","","","",""};
+	}
+
 	public String convertSecondsToSecondsLamp(int seconds){
 		if (seconds%2==0)
 			return "Y";
