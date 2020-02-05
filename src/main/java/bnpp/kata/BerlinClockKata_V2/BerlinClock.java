@@ -21,9 +21,13 @@ public class BerlinClock {
 		return result;
 
 	}
-	
+
 	public String convertHoursToSingleHoursRow(int hours){
-		return "OOOO";
+
+		if (hours%10==1 || hours%10==6)
+			return "ROOO";
+		else
+			return "OOOO";
 	}
 
 }
