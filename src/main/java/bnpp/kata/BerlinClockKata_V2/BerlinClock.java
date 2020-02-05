@@ -43,7 +43,10 @@ public class BerlinClock {
 							if (minutes/5==6)
 								return "YYRYYROOOOO";
 							else
-								return "OOOOOOOOOOO";
+								if (minutes/5==7)
+									return "YYRYYRYOOOO";
+								else
+									return "OOOOOOOOOOO";
 	}
 
 	public String convertHourstoBerlinClockHourRows(int hours,int onLampsCount){
