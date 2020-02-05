@@ -12,47 +12,41 @@ public class BerlinClock {
 	public String convertHoursToFiveHoursRow(int hours){
 
 		int onLampsCount=hours/5;
-		return convertHourstoBerlinClockHourRows(onLampsCount,"R");
+		return convertHourstoBerlinClockHourRows(4,onLampsCount,"R");
 
 	}
 
 	public String convertHoursToSingleHoursRow(int hours){
 
 		int onLampsCount=hours%5;
-		return convertHourstoBerlinClockHourRows(onLampsCount,"R");
+		return convertHourstoBerlinClockHourRows(4,onLampsCount,"R");
 
 	}
 
 	public String convertMinutesToFiveMinutesRow(int minutes){
 
 		int onLampsCount=minutes/5;
-		String result="";
-		for (int i=0;i<11;i++)
-			if (i<onLampsCount)
-			{
-				if (isOnLampRed(i))
-					result+="R";
-				else
-					result+="Y";	
-			}
-			else
-				result+="O";
-		return result;
+		return convertHourstoBerlinClockHourRows(11,onLampsCount,"Y");
 	}
 
 	public String convertMinutesToSingleMinutesRow(int minutes){
 
 		int onLampsCount=minutes%5;
-		return convertHourstoBerlinClockHourRows(onLampsCount,"Y");
+		return convertHourstoBerlinClockHourRows(4,onLampsCount,"Y");
 
 	}
 
-	public String convertHourstoBerlinClockHourRows(int onLampsCount,String onLampDisplay){
+	public String convertHourstoBerlinClockHourRows(int lampsCount,int onLampsCount,String onLampDisplay){
 
 		String result="";
-		for (int i=0;i<4;i++)
+		for (int i=0;i<lampsCount;i++)
 			if (i<onLampsCount)
-				result+=onLampDisplay;
+			{
+				if (lampsCount==11 && isOnLampRed(i))
+					result+="R";
+				else
+					result+=onLampDisplay;
+			}
 			else
 				result+="O";
 		return result;
