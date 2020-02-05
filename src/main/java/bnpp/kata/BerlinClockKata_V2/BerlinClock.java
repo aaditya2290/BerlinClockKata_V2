@@ -24,7 +24,7 @@ public class BerlinClock {
 
 	public String convertHoursToSingleHoursRow(int hours){
 
-		if (hours%10==1 || hours%10==6)
+		if (hours%5==1)
 			return "ROOO";
 		else
 			return "OOOO";
