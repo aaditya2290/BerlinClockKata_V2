@@ -4,7 +4,7 @@ public class BerlinClock {
 
 	public String[] convertDigitalTimeToBerlinClockTime(String digitalTime){
 
-		return new String[]{"O","","","",""};
+		return new String[]{"O","OOOO","","",""};
 	}
 
 	public String convertSecondsToSecondsLamp(int seconds){

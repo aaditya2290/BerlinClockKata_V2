@@ -169,4 +169,9 @@ public class BerlinClockTest {
 	public void testDigitalTimeToBerlinClockTimeConversionFirstArrayElementSizeShouldBe1(){
 		assertEquals(1,clock.convertDigitalTimeToBerlinClockTime("00:00:00")[0].length());
 	}
+	
+	@Test
+	public void testDigitalTimeToBerlinClockTimeConversionSecondArrayElementSizeShouldBe4(){
+		assertEquals(4,clock.convertDigitalTimeToBerlinClockTime("00:00:00")[1].length());
+	}
 }
